@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Website</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Allen Merrill</h1>
+  </header>
+
+  <!-- NAV MENU -->
+  <nav>
+    <ul>
+      <li><a href="#" onclick="openTab('about')">About Me</a></li>
+      <li><a href="#" onclick="openTab('project')">Projects</a></li>
+      <li><a href="#" onclick="openTab('hobbies')">Hobbies</a></li>
+    </ul>
+  </nav>
+
+  <!-- Tab Content -->
+   <!-- Copy pasted for each tab-->
+  <main>
+    <section id="about" class="tab-content">
+      <div class="content-container">
+        <div class="image-block">
+          <img src="https://media.licdn.com/dms/image/v2/D5635AQFyX5J3Puc6Jg/profile-framedphoto-shrink_400_400/B56ZTsn7E9GUAc-/0/1739136676473?e=1758322800&v=beta&t=Y9Jw16_CuuSXrZVV85cE9BfZ6_tRB4XqnEy_sQ3BrGM" alt="Profile Picture">
+        </div>
+        <div class="text-block">
+          <h2>About Me</h2>
+          <p>Hello, my name is Allen Merrill. I'm a junior CS student at the University of Indianapolis. <br>
+            Here are some of my top skills: <br>
+            <br>
+            - HTML, CSS, JavaScript (building simple websites) <br>
+            <br>
+            - SQL (database queries and management) <br>
+            <br>
+            - Proffeciency in Python, C++, Java, C# <br>
+            <br>
+            - Understanding of game programming
+          </p>
+
+          <p>
+            <br>
+            Connect with me on 
+            <a href="https://www.linkedin.com/in/allen-merrill-a695b3261/" target="_blank" style="color: lightblue; text-decoration: underline;">
+                LinkedIn
+            </a>.
+        </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project section -->
+    <section id="project" class="tab-content" style="display:none;">
+      <div class="content-container">
+        <div class="image-block">
+          <img id="projectImage" src="https://media.licdn.com/dms/image/v2/D4E2DAQFw2DP90dYm4Q/profile-treasury-image-shrink_160_160/B4EZZpTxZRHkAo-/0/1745523513191?e=1758405600&v=beta&t=BjSmJ7iKkEUeEL8XP6ikTIp-_LdXyKcu5RIc8kAJNMk" 
+            alt="Project Image"
+            onclick="openLightbox(this.src)" 
+            style="cursor: pointer;">
+          <br>
+          <!-- Swap Photos -->
+          <button onclick="prevImage()">Previous</button>
+          <button onclick="nextImage()">Next</button>
+
+          <!-- Lightbox element -->
+          <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+          <img id="lightboxImage" src="">
+          </div>
+
+          <br><br>
+          <!-- Prpject Descriptions -->
+          <button onclick="toggleDescription()">Show/Hide Description</button>
+          <p id="projectDescription" style="display:none;">
+            These are two games I created. The first one Pirate Dodge was done by me and a samll team. In the game the player sails around a dangerous sea
+            collecting coins. 
+            <br>
+            The second is a game I created myself using only java and javaFX. It's a simple side scrolling platform game where the player must
+            jump to the end of the level.
+          </p>
+        </div>
+        <!-- Letters appear one by one-->
+        <div class="text-block">
+          <h2 id="projectsHeading">Projects</h2>
+          <p id="projectsText">This tab will contain at least 5 JavaScript effects.</p>
+          <!-- Light mode button -->
+          <button onclick="toggleLightMode()">Toggle Light/Dark Mode</button>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="hobbies" class="tab-content" style="display:none;">
+      <div class="content-container">
+        <div class="image-block">
+          <img src="images/profile.png" alt="Profile Screenshot">
+        </div>
+        <div class="text-block">
+          <h2>Hobbies</h2>
+          <p>In my free time, I enjoy playing the viola. I perform with the University of Indianapolis orchestra,
+            and smaller ensembles in the school. I also participate in solo competions in and out of the University.
+            Additionally, I work as a freelance musician, performing at weddings, churches, holiday events, 
+            as well as giving lessons to aspiring players. <br>
+            Recently I've also started learning the piano
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

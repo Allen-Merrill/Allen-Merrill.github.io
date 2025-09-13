@@ -49,6 +49,12 @@ nav li:nth-child(1) a { color: #39ff14; }  /* About = green */
 nav li:nth-child(2) a { color: #00f7ff; }  /* Projects = cyan */
 nav li:nth-child(3) a { color: #ff073a; }  /* Hobbies = red */
 
+.image-caption {
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 5px;
+  color: white; /* change to black if using light mode */
+}
 
 /* CONTENT */
 .content-container {
@@ -75,7 +81,6 @@ nav li:nth-child(3) a { color: #ff073a; }  /* Hobbies = red */
   width: 65%;
 }
 
-
 /* --- MOBILE LAYOUT --- */
 @media (max-width: 768px) {
   .image-block img {
@@ -99,6 +104,7 @@ nav li:nth-child(3) a { color: #ff073a; }  /* Hobbies = red */
     width: 100%;
   }
 }
+
 
 /* Lightbox background */
 .lightbox {
